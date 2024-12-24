@@ -1,4 +1,6 @@
-![app-icon.png](assets%2Fimages%2Fapp-icon.png)
+<p align="center">
+  <img src="assets/images/app-icon.png" alt="App Icon">
+</p>
 
 # Press
 Press is a mobile application that measure user gesture accurately and collect a data set as a final result to be applied for ML models.
