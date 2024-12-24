@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        google()  // This is necessary to access Google services plugins
+        mavenCentral()
+    }
+    dependencies {
+        // Add Google Services Plugin
+        classpath 'com.google.gms:google-services:4.4.2'  // or the latest version available
+    }
+}
+
+allprojects {
+    repositories {
+        google()    // To access Google services and Firebase SDKs
+        mavenCentral()  // To access other dependencies hosted on Maven Central
+    }
+}
+
+rootProject.buildDir = "../build"  // Defines where the build output will be stored
+
+subprojects {
+    // Ensures all subprojects are using the same build directory
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+
+    // Makes sure the app project is evaluated even if it's not explicitly mentioned in the build.gradle of the subprojects
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    // Custom clean task that deletes the build directory
+    delete rootProject.buildDir
+}

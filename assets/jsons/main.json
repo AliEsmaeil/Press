@@ -1,0 +1,40 @@
+{
+    "appName": "Press",
+    "type" : "dragging",
+    "questions" : [
+        {
+            "id" : 1,
+            "images" : [
+                "boy.png",
+                "girl.png",
+                "family.png"
+            ]
+        },
+        {
+            "id" : 2,
+            "images" : [
+                "orange.png",
+                "watermelon.png",
+                "apple.png"
+            ]
+        },
+        {
+            "id" : 3,
+            "images" : [
+                "cow.png",
+                "horse.png",
+                "camel.png"
+            ]
+        },
+        {
+            "id" : 4,
+            "images" : [
+                "car.png",
+                "motorcycle.png",
+                "plane.png"
+            ]
+        }
+        
+
+    ]
+}

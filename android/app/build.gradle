@@ -1,0 +1,84 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'  // This is for Firebase/Google services
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.press"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.example.press"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    signingConfigs {
+        debug {
+            // Debug signing configuration, it can be left empty if you don't need custom debug signing.
+        }
+        release {
+            // Path to your keystore file (replace with your actual path)
+            storeFile file("release.keystore")
+            storePassword project.MY_KEYSTORE_PASSWORD
+            keyAlias project.MY_KEY_ALIAS
+            keyPassword project.MY_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        debug {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+            // Optional: Enable code shrinking, obfuscation, etc.
+            minifyEnabled false  // Set to true if you want to use ProGuard/R8
+            shrinkResources false
+        }
+    }
+}
+
+dependencies {
+
+    // Google Play Services (for Firebase and other services)
+    implementation 'com.google.android.gms:play-services-base:18.5.0'
+
+    // Firebase BoM to manage Firebase dependencies automatically
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+
+    // Firestore SDK - This version will be managed by Firebase BoM
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Optional: Add other Firebase dependencies as needed
+    // implementation 'com.google.firebase:firebase-auth' // Uncomment if needed
+}
+
+flutter {
+    source = "../.."
+}
+
+// Apply Google services plugin at the bottom (after dependencies and other setup)
+apply plugin: 'com.google.gms.google-services'
