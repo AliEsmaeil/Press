@@ -14,13 +14,13 @@ Press is a mobile application that measure user gesture accurately and collect a
 - Code Extraction
 _____________________________________________________________
 ### Feature and usage
-**Drag Drop Question**, press measures gesture through observing user touches during interacting with questions.
+- **Drag Drop Question**, press measures gesture through observing user touches during interacting with questions.
 
-**Statistics Graphs**, presenting the average of every gesture on a statistical graph to show up how data is.
+- **Statistics Graphs**, presenting the average of every gesture on a statistical graph to show up how data is.
 
-**Data Set** provide the data set collected from done tests within a good formatted excel sheet to be applied to ML models.
+- **Data Set** provide the data set collected from done tests within a good formatted excel sheet to be applied to ML models.
 
-**Provide Flavors** as a normal user you can answer the questions and explore a limited version of results, admins only can get into statistical part of the application.
+- **Provide Flavors** as a normal user you can answer the questions and explore a limited version of results, admins only can get into statistical part of the application.
 
 ### Measured Gestures
 - Drag Angel
