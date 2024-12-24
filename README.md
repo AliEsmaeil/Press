@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/app-icon.png" alt="App Icon">
+  <img src="android/app/src/main/res/drawable-xxxhdpi/splash.png" alt="App Icon">
 </p>
 
 # Press
