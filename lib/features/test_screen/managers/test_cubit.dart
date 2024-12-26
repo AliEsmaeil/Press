@@ -70,6 +70,7 @@ class TestCubit extends Cubit<TestState> {
     double distance = sqrt(
         pow(lastPressPixel!.dx - initialPressPixel!.dx, 2) +
             pow(lastPressPixel!.dy - initialPressPixel!.dy, 2));
+
     addDistanceBetweenTouches(distance);
     addTimeBetweenTouches(touchStopwatch.elapsed);
     initialPressPixel = null;
